@@ -108,7 +108,7 @@ def search_by_statistic(hidden_states_path, topk) -> list[int]:
     dim_cand = [int(i) for i in dim_cand]
 
     print(
-        "positional dimensions are {}".format(str(dim_cand)))
+        "possible positional dimensions are {}".format(str(dim_cand)))
 
     return dim_cand
 

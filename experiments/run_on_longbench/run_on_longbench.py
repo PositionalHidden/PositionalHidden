@@ -147,6 +147,8 @@ def run_on_dataset(df_path, model,tokenizer, scale_config_name, max_length):
     script_dir = os.path.dirname(script_path)
     print('test on :',df_path)
     df_name=os.path.basename(df_path)
+    if not os.path.exists(df_path):
+        raise ValueError(f"File {df_path} does not exist. Please check the file path and make sure you have downloaded the dataset.")
     test_dataset = pd.read_json(df_path, lines=True)
     test_dataset['model_reply'] = ''
 

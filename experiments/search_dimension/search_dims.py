@@ -1,9 +1,14 @@
 import argparse
 import os
+import sys
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 from get_avg_hidden_state import get_hidden_states
 from seach_dim_by_statistic import search_by_statistic
 from eval_on_valid_set import eval_dims_main
+
 
 
 def main(model_path, corpus_path, sample_num, max_length, add_bos_token, topk_of_smooth, topk_of_loss, valid_set_path):
@@ -23,13 +28,13 @@ def main(model_path, corpus_path, sample_num, max_length, add_bos_token, topk_of
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("--model_path", type=str, required=True)
-    parser.add_argument("--corpus_path", type=str, default="./corpus/random_string.txt")
+    parser.add_argument("--corpus_path", type=str, required=True)
     parser.add_argument("--sample_num", type=int, default=200)
     parser.add_argument("--max_length", type=int, default=1000)
     parser.add_argument("--add_bos_token", type=bool, default=False)
     parser.add_argument("--topk_of_smooth", type=int, default=10)
     parser.add_argument("--topk_of_loss", type=int, default=3)
-    parser.add_argument("--valid_set_path", type=str, default="./valid_set/KV60_valid_set.json")
+    parser.add_argument("--valid_set_path", type=str, required=True)
     args = parser.parse_args()
     result=main(args.model_path,
          args.corpus_path,
