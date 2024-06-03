@@ -12,9 +12,9 @@ import torch
 from tqdm import tqdm
 from xopen import xopen
 
-sys.path.append("./")
-sys.path.append("../")
-sys.path.append("../../")
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 from lost_in_the_middle.prompting import (
     Document,
@@ -303,6 +303,16 @@ if __name__ == "__main__":
 
 
     args = parser.parse_args()
+
+    print("running on NQ with the following arguments:")
+    print("model path:",args.model_path)
+    print("scale config:",args.scale_config)
+    print("num_docs:",args.num_docs)
+    print("gold:",args.gold)
+    print("temperature:",args.temperature)
+    print("top_p:",args.top_p)
+    print("max_new_tokens:",args.max_new_tokens)
+    print("sample_num:",args.sample_num)
 
     main(
         num_docs=args.num_docs,

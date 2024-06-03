@@ -12,9 +12,9 @@ import torch
 from tqdm import tqdm
 from xopen import xopen
 
-sys.path.append("./")
-sys.path.append("../")
-sys.path.append("../../")
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 from lost_in_the_middle.prompting import get_kv_retrieval_prompt
 
@@ -283,6 +283,16 @@ if __name__ == "__main__":
 
 
     args = parser.parse_args()
+
+    print("running on KV with the following arguments:")
+    print("model path: ",args.model_path)
+    print("scale config: ",args.scale_config)
+    print("gold: ",args.gold)
+    print("num kvs: ",args.num_kvs)
+    print("temperature: ",args.temperature)
+    print("top p: ",args.top_p)
+    print("max new tokens: ",args.max_new_tokens)
+    print("sample num: ",args.sample_num)
 
     main(
         num_kvs=args.num_kvs,

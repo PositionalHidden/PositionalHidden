@@ -21,7 +21,7 @@ from setuptools import find_packages, setup
 VERSION = "0.1.0.dev"
 
 INSTALL_REQUIRES = [
-    "transformers>=4.26.0",
+    "transformers>=4.39.0",
     "torch",
     "scipy",
     "numpy",

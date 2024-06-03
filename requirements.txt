@@ -8,7 +8,6 @@ xopen
 tqdm
 pandas
 scipy
-git+https://github.com/nelson-liu/lost-in-the-middle.git
 transformers
 accelerate
 flash_attn

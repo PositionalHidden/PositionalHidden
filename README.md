@@ -69,7 +69,8 @@ bash scripts/run_on_KV.sh
 
 #### LongBench
 You can download the LongBench dataset [here](https://huggingface.co/datasets/THUDM/LongBench) and place the subdatasets in the `run_on_longbench/longbench` directory. 
-Then run the following command to evaluate the model on the LongBench datasets. You can choose the subdatasets by passing the `--dataset_names` or `--dataset_type` parameters, such as:
+Then run the following command to evaluate the model on the LongBench datasets. You can choose the subdatasets by passing the `--dataset_names` or `--dataset_type` parameters, 
+as shown in ```scripts/run_on_longbench.sh```:
 ```bash
 bash scripts/run_on_longbench.sh
 ```

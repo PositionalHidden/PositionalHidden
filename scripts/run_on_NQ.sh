@@ -1,5 +1,5 @@
-# download NQ datasets
-git clone https://github.com/nelson-liu/lost-in-the-middle
+## download NQ datasets
+#git clone https://github.com/nelson-liu/lost-in-the-middle
 
 CUDA_VISIBLE_DEVICES=0 python experiments/NQ/run_hidden_scale_NQ.py \
 --model-path "meta-llama/Llama-2-7b-chat-hf"  \
