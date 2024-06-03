@@ -100,7 +100,7 @@ def get_model_class(model_path):
 
     return Model
 
-#根据文件名决定prompt函数
+#decide the prompt based on the dataset name
 def prompt_func(df_path,input,context):
     df_name=os.path.basename(df_path).replace('.jsonl','')
     if df_name.endswith('_e'):
