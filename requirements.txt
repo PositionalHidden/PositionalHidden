@@ -1,0 +1,11 @@
+rouge
+rouge_score
+jieba
+datasets
+fuzzywuzzy
+evaluate==0.4.1
+xopen
+tqdm
+pandas
+scipy
+git+https://github.com/nelson-liu/lost-in-the-middle.git

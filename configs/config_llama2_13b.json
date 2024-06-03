@@ -1,0 +1,8 @@
+{
+        "dims": [4283],
+        "layers": [10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34]
+        "factor": 0,
+        "skip_first": 0,
+        "last_recompute_tokens": 1,
+        "change_value": false
+}
