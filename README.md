@@ -2,7 +2,7 @@
 
 This repository contains the open-sourced official implementation of the paper:
 
-[Mitigate Position Bias in Large Language Models via Scaling a Single Dimension](https://arxiv.org/abs/2406.) (Under Review).<br/>
+[Mitigate Position Bias in Large Language Models via Scaling a Single Dimension](https://arxiv.org/abs/2406.02536) (Under Review).<br/>
 _Yijiong Yu, Huiqiang Jiang, Xufang Luo, Qianhui Wu, Chin-Yew Lin, Dongsheng Li, Yuqing Yang, Yongfeng Huang and Lili Qiu_
 
 If you find this repo helpful, please cite the following paper:
@@ -11,7 +11,7 @@ If you find this repo helpful, please cite the following paper:
 @article{yu2024mitigate,
   title={Mitigate Position Bias in Large Language Models via Scaling a Single Dimension},
   author={Yu, Yijiong and Jiang, Huiqiang and Luo, Xufang and Wu, Qianhui and Lin, Chin-Yew and Li, Dongsheng and Yang, Yuqing and Huang, Yongfeng and Qiu, Lili},
-  journal={arXiv preprint arXiv:2406.},
+  journal={arXiv preprint arXiv:2406.02536},
   year={2024}
 }
 ```
