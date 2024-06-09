@@ -107,8 +107,11 @@ def main(
     if scale_config_path is not None:
         with open(scale_config_path, "r") as f:
             scale_config = json.load(f)
+        scale_config_name=os.path.basename(scale_config_path).replace(".json","")
+
     else:
         scale_config = None
+        scale_config_name="no_scale"
 
     print("model name",os.path.basename(model_path))
     print("scale config:",scale_config)
@@ -178,7 +181,6 @@ def main(
 
         model_name=os.path.basename(model_path)
         test_dataset_name=os.path.basename(input_path).replace(".jsonl.gz","").replace("300",str(num_kvs))+"_gold_"+str(gold)+".jsonl"
-        scale_config_name=os.path.basename(scale_config_path).replace(".json","")
         output_path=script_dir+"/model_responses/{model_name}/scale_{scale_config_name}/{test_dataset_name}".format(model_name=model_name,scale_config_name=scale_config_name,test_dataset_name=test_dataset_name)
 
         # Create directory for output path if it doesn't exist.
